@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/book_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_details"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_keyboard_arrow_left"
+            android:drawableLeft="@drawable/ic_keyboard_arrow_left"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/book_image_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintTop_toBottomOf="@id/book_details"
+            app:cardCornerRadius="16dp"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/book_image_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_image"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/book_name_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintTop_toBottomOf="@id/book_image_card"
+            android:layout_marginTop="8dp"
+            android:text="@string/book_name"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/book_author_name_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/book_name_details"
+            android:layout_marginTop="8dp"
+            android:text="@string/author_name"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginRight="24dp"
+            android:layout_marginEnd="24dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book_name_details"
+            app:layout_constraintBottom_toTopOf="@id/rating"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/book_price_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/book_name_details"
+            android:layout_marginTop="8dp"
+            android:text="@string/book_price"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/book_price_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:rating="0"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/rating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/rating"
+            app:layout_constraintBottom_toBottomOf="@id/rating"
+            app:layout_constraintStart_toEndOf="@id/rating" />
+
+        <LinearLayout
+            android:id="@+id/linear_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/rating"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_information"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/bookInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sdfkpejmgflkeasmvfaesm;vd;alksgtrj;lgjdf,;lvgtnjgjgdkbgsjttkv,mdndnsdn;'kalddnnslrnnlskrnglfdn"
+                android:textSize="20sp"
+                android:textColor="#EB2C2B2B"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_author"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/aboutAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sdfkpejmgflkeasmvfaesm;vd;alksgtrj;lgjdf,;lvgtnjgjgdkbgsjttkv,mdndnsdn;'kalddnnslrnnlskrnglfdn"
+                android:textSize="20sp"
+                android:textColor="#EB2C2B2B"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/place_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintTop_toBottomOf="@id/linear_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/back_orange_button"
+            android:text="@string/place_order"
+            android:textColor="#ffffff"
+            android:textSize="20sp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".95"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

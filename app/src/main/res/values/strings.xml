@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">BookStore</string>
+    <string name="home">Home</string>
+    <string name="books">Books</string>
+    <string name="profile">Profile</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="book_store">Book Store</string>
+    <string name="featured">Featured</string>
+    <string name="see_all">See all</string>
+    <string name="featured_tap">Featured</string>
+    <string name="open">Open</string>
+    <string name="book_details">Book Details</string>
+    <string name="book_name">book name</string>
+    <string name="author_name">author name</string>
+    <string name="book_price">book_price</string>
+    <string name="book_information">Book Information</string>
+    <string name="about_author">About Author</string>
+    <string name="place_order">Place order</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log out</string>
+    <string name="username">UserName</string>
+
+</resources>
