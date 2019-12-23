@@ -7,10 +7,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import com.example.hala.bookstore.Adapter.Holder;
 import com.example.hala.bookstore.R;
 import com.example.hala.bookstore.view.Books.fragments.BooksFragment;
 import com.example.hala.bookstore.view.Home.fragments.HomeFragment;
@@ -57,5 +62,12 @@ public class MainActivity extends AppCompatActivity
                 return true;
         }
         return false;
+    }
+
+    public void openBook(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(Holder.url));
+        Toast.makeText(this, "open", Toast.LENGTH_SHORT).show();
+        startActivity(browserIntent);
     }
 }
